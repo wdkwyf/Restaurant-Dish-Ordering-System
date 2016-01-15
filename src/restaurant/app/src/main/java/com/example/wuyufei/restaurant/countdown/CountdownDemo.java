@@ -19,13 +19,17 @@ package com.example.wuyufei.restaurant.countdown;
 import java.util.Calendar;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.Chronometer.OnChronometerTickListener;
 import android.widget.Toast;
+
+import com.example.wuyufei.restaurant.R;
 
 public class CountdownDemo extends Activity {
 
@@ -36,30 +40,13 @@ public class CountdownDemo extends Activity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.chronometer);
+		SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+		String time = pref.getString("waiting_time","600");
+		int seconds = 60000*Integer.parseInt(time);
 
-		Button button;
 
 		countdown = (CountdownChronometer) findViewById(R.id.chronometer);
-
-		countdown.setBase(System.currentTimeMillis() + 30000);
-
-		button = (Button) findViewById(R.id.start);
-		button.setOnClickListener(mStartListener);
-
-		button = (Button) findViewById(R.id.stop);
-		button.setOnClickListener(mStopListener);
-
-		button = (Button) findViewById(R.id.reset);
-		button.setOnClickListener(mResetListener);
-
-		button = (Button) findViewById(R.id.set_format);
-		button.setOnClickListener(mSetFormatListener);
-
-		button = (Button) findViewById(R.id.clear_format);
-		button.setOnClickListener(mClearFormatListener);
-
-		button = (Button) findViewById(R.id.set_listener);
-		button.setOnClickListener(mSetOnCompleteListener);
+		countdown.setBase(System.currentTimeMillis() + seconds);
 
 	}
 
@@ -75,52 +62,52 @@ public class CountdownDemo extends Activity {
 		super.onPause();
 	}
 
-	OnClickListener mStartListener = new OnClickListener() {
-		public void onClick(View v) {
-			countdown.start();
-		}
-	};
+//	OnClickListener mStartListener = new OnClickListener() {
+//		public void onClick(View v) {
+//			countdown.start();
+//		}
+//	};
 
-	OnClickListener mStopListener = new OnClickListener() {
-		public void onClick(View v) {
-			countdown.stop();
-		}
-	};
+//	OnClickListener mStopListener = new OnClickListener() {
+//		public void onClick(View v) {
+//			countdown.stop();
+//		}
+//	};
 
-	OnClickListener mResetListener = new OnClickListener() {
-		public void onClick(View v) {
-			Calendar c = Calendar.getInstance();
-			c.set(2011, Calendar.AUGUST, 26, 9, 0, 0);
-			countdown.setBase(c.getTimeInMillis());
-		}
-	};
+//	OnClickListener mResetListener = new OnClickListener() {
+//		public void onClick(View v) {
+//			Calendar c = Calendar.getInstance();
+//			c.set(2011, Calendar.AUGUST, 26, 9, 0, 0);
+//			countdown.setBase(c.getTimeInMillis());
+//		}
+//	};
 
-	OnClickListener mSetFormatListener = new OnClickListener() {
-		public void onClick(View v) {
-			countdown
-					.setCustomChronoFormat("%1$02d days, %2$02d hours, %3$02d minutes "
-							+ "and %4$02d seconds remaining");
-			countdown.setFormat("Formatted time (%s)");
-		}
-	};
-
-	OnClickListener mClearFormatListener = new OnClickListener() {
-		public void onClick(View v) {
-			countdown.setCustomChronoFormat(null);
-			countdown.setFormat(null);
-		}
-	};
-
-	OnClickListener mSetOnCompleteListener = new OnClickListener() {
-		public void onClick(View v) {
-			countdown.setOnCompleteListener(new OnChronometerTickListener() {
-				@Override
-				public void onChronometerTick(Chronometer chronometer) {
-					Toast.makeText(CountdownDemo.this, "We have lift off!",
-							Toast.LENGTH_SHORT).show();
-				}
-			});
-		}
-	};
+//	OnClickListener mSetFormatListener = new OnClickListener() {
+//		public void onClick(View v) {
+//			countdown
+//					.setCustomChronoFormat("%1$02d days, %2$02d hours, %3$02d minutes "
+//							+ "and %4$02d seconds remaining");
+//			countdown.setFormat("Formatted time (%s)");
+//		}
+//	};
+//
+//	OnClickListener mClearFormatListener = new OnClickListener() {
+//		public void onClick(View v) {
+//			countdown.setCustomChronoFormat(null);
+//			countdown.setFormat(null);
+//		}
+//	};
+//
+//	OnClickListener mSetOnCompleteListener = new OnClickListener() {
+//		public void onClick(View v) {
+//			countdown.setOnCompleteListener(new OnChronometerTickListener() {
+//				@Override
+//				public void onChronometerTick(Chronometer chronometer) {
+//					Toast.makeText(CountdownDemo.this, "We have lift off!",
+//							Toast.LENGTH_SHORT).show();
+//				}
+//			});
+//		}
+//	};
 
 }

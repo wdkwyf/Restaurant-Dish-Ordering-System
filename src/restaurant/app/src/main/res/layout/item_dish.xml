@@ -22,15 +22,15 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorPrimaryText"
                 android:layout_alignParentBottom="true"
-                android:paddingBottom="8dip"
-                android:text="鸡排"
-                android:textSize="25sp" />
+                android:paddingBottom="10dip"
+                android:textSize="20sp" />
             <at.markushi.ui.CircleButton
-                android:layout_width="48dip"
-                android:layout_height="48dip"
+                android:layout_width="45dip"
+                android:layout_height="45dip"
+                android:id="@+id/select_circle_button"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
-                android:src="@drawable/ic_add"
+                android:src="@drawable/ic_add_cart"
                 app:cb_color="@color/colorAccent"
                 app:cb_pressedRingWidth="8dip" />
         </RelativeLayout>
@@ -55,11 +55,7 @@
                 android:paddingBottom="8dip"
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@+id/units"
-                android:text="11.1"
                 android:textSize="15sp" />
-
-
-
 
         </RelativeLayout>
 

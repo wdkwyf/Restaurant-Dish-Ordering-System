@@ -22,7 +22,7 @@
         app:stl_defaultTabBackground="?attr/selectableItemBackground"
         app:stl_defaultTabTextColor="@color/colorPrimaryText"
         app:stl_defaultTabTextHorizontalPadding="16dp"
-        app:stl_defaultTabTextSize="12sp"
+        app:stl_defaultTabTextSize="15sp"
         app:stl_dividerColor="#4D000000"
         app:stl_dividerThickness="1dp"
         app:stl_distributeEvenly="true"

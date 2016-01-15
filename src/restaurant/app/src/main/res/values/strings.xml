@@ -7,5 +7,28 @@
     <string name="tab_veg">素菜区</string>
     <string name="tab_staple">主食区</string>
     <string name="tab_drinks">饮品区</string>
+    <string name="snack_head1">您已购买：</string>
+    <string name="rmb_unit">￥</string>
+    <string name="rmb_yuan">元</string>
+    <string name="snack_head2">总计：</string>
+    <string name="total_price">总计：</string>
+    <string name="title_activity_cart">订单</string>
+    <string name="title_activity_main">点菜APP</string>
+    <string name="choose_you_like">选择您喜欢的菜</string>
+    <string name="cancel">清空</string>
+    <string name="confirm">确认</string>
+    <string name="doubt">我再想想</string>
+    <string name="confirm_question">确认提交订单吗？</string>
+    <string name="cancel_question">确认清空购物车吗？</string>
+    <string name="call_waiter">呼叫服务员</string>
+    <string name="show_time">等待时间</string>
+    <string name="set_table">新客人</string>
+    <string name="set_table_input_content1">输入桌号</string>
+    <string name="set_table_input_content2">输入人数</string>
+    <string name="next">下一步</string>
+    <string name="call_response">已经接到您的请求，服务员即将到达您的身边</string>
+    <string name="call_response_finish">响应成功</string>
+    <string name="chronometer_initial_format">Initial format: %s</string>
+    <string name="call_finish">响应呼叫</string>
 
 </resources>

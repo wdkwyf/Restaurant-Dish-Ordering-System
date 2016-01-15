@@ -6,4 +6,6 @@
     <color name="colorPrimaryText">#212121</color>
     <color name="colorDivider">#B6B6B6</color>
     <color name="colorRipple">#F06292</color>
+    <color name="colorLightPrimary">#FFE0B2</color>
+    <color name="colorBackGround">#727272</color>
 </resources>

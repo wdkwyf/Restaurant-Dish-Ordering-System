@@ -1,6 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="vertical"
+    android:paddingLeft="40dp"
+    tools:context=".CartActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cart_textview_name"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:gravity="center|left"
+            android:text="大鸡排"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@+id/cart_textview_price"
+            android:gravity="center|right"
+            android:text="@string/rmb_unit"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/cart_textview_price"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_toStartOf="@+id/circle_button_cart_left"
+            android:gravity="center|left"
+            android:textSize="20sp" />
+
+        <at.markushi.ui.CircleButton
+            android:id="@+id/circle_button_cart_left"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:layout_toStartOf="@+id/cart_textview_count"
+            android:src="@drawable/ic_reduce"
+            app:cb_color="@color/colorBackGround"
+            app:cb_pressedRingWidth="6dip" />
+
+        <TextView
+            android:id="@+id/cart_textview_count"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@+id/circle_button_cart_right"
+            android:gravity="center"
+            android:textSize="20sp" />
+
+        <at.markushi.ui.CircleButton
+            android:id="@+id/circle_button_cart_right"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_add"
+            app:cb_color="@color/colorBackGround"
+            app:cb_pressedRingWidth="6dip" />
+
+
+    </RelativeLayout>
 
 </LinearLayout>
